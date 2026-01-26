@@ -88,7 +88,7 @@ jobs:
             ${{ secrets.DOCKER_USERNAME }}/bulimova-task:latest
 
 
-  # ======================
+  # =======================
   # STAGE: DEPLOY
   # ======================
   deploy:
