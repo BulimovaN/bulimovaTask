@@ -59,7 +59,7 @@ jobs:
 
   # ======================
   # STAGE: DOCKERIZE
-  # ======================
+  # =======================
   dockerize:
     name: Dockerize
     runs-on: ubuntu-latest
