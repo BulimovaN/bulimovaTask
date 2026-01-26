@@ -1,0 +1,47 @@
+spring:
+  application:
+    name: bulimovaTask
+
+  datasource:
+    url: jdbc:postgresql://localhost:5433/postgres
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    open-in-view: false
+
+  sql:
+    init:
+      mode: never
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+  endpoint:
+    prometheus:
+      enabled: true
+
+jwt:
+  secret: very-very-secret-key-change-me-please-very-long
+  expiration: 36000000
+
+admin:
+  email: admin@local.dev
+  password: admin123
+  username: admin
+
+server:
+  port: 8080
+
+logging:
+  level:
+    root: INFO
+    com.example.bulimovaTask: INFO
+    org.hibernate.SQL: DEBUG
