@@ -2,7 +2,6 @@ package com.example.bulimovaTask.controller;
 
 
 import com.example.bulimovaTask.BaseIntegrationTest;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,9 +1,7 @@
 package com.example.bulimovaTask.controller;
 
-//import com.example.bulimovaTask.old.AbstractIntegrationTest;
 import com.example.bulimovaTask.BaseIntegrationTest;
 import com.example.bulimovaTask.security.WithMockCustomUser;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
