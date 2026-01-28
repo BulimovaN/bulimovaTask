@@ -1,11 +1,13 @@
 services:
   db:
-    image: postgres:15
+    image: postgres:16
     container_name: bulimova-postgres
+    ports:
+      - "5433:5432"
     environment:
-      POSTGRES_DB: bulimova_db
-      POSTGRES_USER: bulimova
-      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
@@ -17,10 +19,11 @@ services:
     depends_on:
       - db
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/bulimova_db
-      SPRING_DATASOURCE_USERNAME: bulimova
-      SPRING_DATASOURCE_PASSWORD: secret
-      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_PROFILES_ACTIVE: docker
+#      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/postgres
+#      SPRING_DATASOURCE_USERNAME: postgres
+#      SPRING_DATASOURCE_PASSWORD: postgres
+#      SPRING_JPA_HIBERNATE_DDL_AUTO: update
 
 volumes:
   postgres_data:
